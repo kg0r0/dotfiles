@@ -5,9 +5,7 @@ ln -sh ~/dotfiles/.gitconfig ~/.gitconfig
 
 # golang setting
 mkdir $HOME/workspace
-cd /usr/local
-wget https://storage.googleapis.com/golang/go1.9.linux-amd64.tar.gz
+wget https://storage.googleapis.com/golang/go1.9.linux-amd64.tar.gz -P /usr/local
 tar xvf go1.9.linux-amd64.tar.gz
-
 
 source ~/.bash_profile
