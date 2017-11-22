@@ -28,10 +28,29 @@ set showmatch
 set helpheight=999
 set tabstop=4
 
+imap { {}<LEFT>
+imap [ []<LEFT>
+imap ( ()<LEFT>
+
 syntax on
 
-" golang setting
-call plug#begin(''~/.vim/plugged)
-Plug 'fatih/vim-go'
-call plug#end()
-let g:go_fmt_command = "goimports"
+filetype plugin on
+
+" Neobundle Settings
+set runtimepath+=~/.vim/bundle/neobundle.vim/
+call neobundle#begin(expand('~/.vim/bundle/'))
+NeoBundleFetch 'Shougo/neobundle.vim'
+" add plugin
+NeoBundle 'moll/vim-node'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'Townk/vim-autoclose'
+NeoBundle 'fatih/vim-go'
+NeoBundle 'w0ng/vim-hybrid'
+call neobundle#end()
+filetype plugin indent on
+NeoBundleCheck
+
+colorscheme hybrid
+set t_Co=256
+highlight LineNr ctermfg=darkyellow
+set background=dark
