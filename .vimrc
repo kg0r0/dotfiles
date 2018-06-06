@@ -28,10 +28,11 @@ set showmatch
 set helpheight=999
 set tabstop=4
 
+autocmd ColorScheme * highlight LineNr ctermfg=220
+
 imap { {}<LEFT>
 imap [ []<LEFT>
 imap ( ()<LEFT>
-
 syntax on
 
 filetype plugin on
@@ -46,6 +47,7 @@ NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'Townk/vim-autoclose'
 NeoBundle 'fatih/vim-go'
 NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'scrooloose/nerdtree'
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
