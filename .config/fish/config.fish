@@ -14,3 +14,6 @@ set PATH /usr/local/bin /Users/kgoro/.nodebrew/current/bin /Users/kgoro/secpf/wo
 
 # encoding
 set -x LANG ja_JP.UTF-8
+
+# enable venv
+source venv/bin/activate.fish
